@@ -1,0 +1,15 @@
+{
+  "id": "L-201",
+  "title": "4-room HDB near Bishan MRT",
+  "type": "HDB",
+  "district": "Bishan",
+  "price": 698000,
+  "bedrooms": 3,
+  "bathrooms": 2,
+  "floorAreaSqft": 990,
+  "floorAreaSqm": 92.0,
+  "psf": 705,
+  "maintenanceFeeSgd": 88,
+  "listedOn": "2026-09-20",
+  "agentId": "A1"
+}

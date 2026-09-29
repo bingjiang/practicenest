@@ -1,0 +1,15 @@
+{
+  "id": "L-203",
+  "title": "2-bedroom condo in Tiong Bahru",
+  "type": "Condo",
+  "district": "Tiong Bahru",
+  "price": 1250000,
+  "bedrooms": 2,
+  "bathrooms": 2,
+  "floorAreaSqft": 764,
+  "floorAreaSqm": 764.0,
+  "psf": 1636,
+  "maintenanceFeeSgd": 380,
+  "listedOn": "2026-09-25",
+  "agentId": "A2"
+}

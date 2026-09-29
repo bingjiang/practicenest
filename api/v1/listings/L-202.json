@@ -1,0 +1,15 @@
+{
+  "id": "L-202",
+  "title": "Corner 5-room HDB with waterway view",
+  "type": "HDB",
+  "district": "Punggol",
+  "price": 1000000,
+  "bedrooms": 4,
+  "bathrooms": 2,
+  "floorAreaSqft": 1216,
+  "floorAreaSqm": 113.0,
+  "psf": 822,
+  "maintenanceFeeSgd": 96,
+  "listedOn": "2026-09-18",
+  "agentId": "A1"
+}

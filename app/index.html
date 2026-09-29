@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>App · PracticeNest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+.appgrid{margin-top:20px;display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:860px){.appgrid{grid-template-columns:1fr}}
+.phone{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;min-height:420px}
+.phead{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:12px}
+.phead h2{margin:0}
+.count,.note{color:var(--faint);font-size:13px}
+.vlist{display:grid;gap:10px}
+.vrow{display:grid;gap:3px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;text-decoration:none;color:inherit}
+.vrow:hover{border-color:var(--accent)}
+.vtop{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.vtop b{font-size:14.5px;line-height:1.35}
+.vwhen{font-size:13.5px;font-variant-numeric:tabular-nums}
+.vmeta{font-size:12.5px;color:var(--faint)}
+.chip{flex:none;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:6px;background:var(--accent-soft);color:var(--accent)}
+.chip-cancelled,.chip-completed{background:var(--sunk);color:var(--muted)}
+.back{font-weight:600;text-decoration:none;font-size:14px}
+.dtitle{margin:12px 0 2px;font-size:20px}
+.dsub{margin:0;color:var(--muted);font-size:13.5px}
+.dprice{margin:8px 0 0;font-size:24px;font-weight:800;color:var(--accent)}
+.facts{margin:14px 0;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.facts div{padding:9px 11px;border:1px solid var(--line);border-radius:10px}
+.facts dt{font-size:11.5px;color:var(--faint);font-weight:600}
+.facts dd{margin:0;font-weight:700;font-variant-numeric:tabular-nums}
+.agentbox{display:grid;padding:10px 12px;border-radius:10px;background:var(--sunk)}
+.agentbox span{font-size:13px;color:var(--muted)}
+.err{color:var(--bad);font-weight:600}
+</style>
+</head><body>
+<div class="practice">Practice website for QA testing. All listings, agents and bookings are fictional.</div>
+<header class="bar"><div class="bar-in">
+  <a class="brand" href="../"><span class="brand-mark" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8 8 2.5 14 8v5.5H9.8V10H6.2v3.5H2z" fill="#fff"/></svg></span>PracticeNest</a>
+  <nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../design/">Design review</a><a href="../app/" aria-current="page">App</a><a href="../api/">API</a><a href="../device/">Device check</a></nav>
+</div></header>
+<main>
+
+<h1>App: My viewings</h1>
+<p class="lead">This is the web version of the app's My viewings screen. It reads everything from the <a href="../api/">API</a>. Tap a viewing to open its listing.</p>
+<div class="appgrid">
+  <section class="phone" id="app" aria-live="polite"><p class="note">Loading…</p></section>
+  <section class="panel"><h2>Display rules</h2>
+    <ol>
+      <li>Times are shown in Singapore time (SGT, UTC+8), for example <i>Tue 6 Oct · 14:00–14:30 SGT</i>.</li>
+      <li>Status labels: <code>pending</code> is shown as <i>Awaiting agent</i>, <code>confirmed</code> as <i>Confirmed</i>, <code>cancelled</code> as <i>Cancelled</i>, and <code>completed</code> as <i>Completed</i>.</li>
+      <li>Prices under S$1,000,000 are shown in full, for example <i>S$698,000</i>. Prices of S$1,000,000 or more are shown in millions, rounded to 2 decimal places, for example <i>S$1.25M</i>.</li>
+      <li>A field that is <code>null</code> is shown as <i>Not provided</i>.</li>
+      <li>Floor area is shown as <i>990 sqft (92 sqm)</i>, with sqm rounded to a whole number.</li>
+      <li>My viewings lists every viewing from every page, sorted by start time.</li>
+    </ol>
+  </section>
+</div>
+<script src="app.js" defer></script>
+
+</main>
+</body></html>

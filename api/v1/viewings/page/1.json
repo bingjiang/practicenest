@@ -1,0 +1,39 @@
+{
+  "page": 1,
+  "pageSize": 4,
+  "total": 7,
+  "results": [
+    {
+      "id": "V-2001",
+      "listingId": "L-201",
+      "agentId": "A1",
+      "start": "2026-10-06T02:00:00Z",
+      "end": "2026-10-06T02:30:00Z",
+      "status": "confirmed"
+    },
+    {
+      "id": "V-2002",
+      "listingId": "L-202",
+      "agentId": "A1",
+      "start": "2026-10-07T06:00:00Z",
+      "end": "2026-10-07T06:30:00Z",
+      "status": "pending"
+    },
+    {
+      "id": "V-2003",
+      "listingId": "L-203",
+      "agentId": "A2",
+      "start": "2026-10-08T10:30:00Z",
+      "end": "2026-10-08T11:00:00Z",
+      "status": "confirmed"
+    },
+    {
+      "id": "V-2004",
+      "listingId": "L-204",
+      "agentId": "A2",
+      "start": "2026-10-09T08:00:00Z",
+      "end": "2026-10-09T07:30:00Z",
+      "status": "confirmed"
+    }
+  ]
+}

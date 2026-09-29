@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>API · PracticeNest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<style>.apigrid{margin-top:20px;display:grid;gap:16px;max-width:820px}.apigrid h2 code{font-size:15px}.apigrid pre{margin:10px 0}</style>
+</head><body>
+<div class="practice">Practice website for QA testing. All listings, agents and bookings are fictional.</div>
+<header class="bar"><div class="bar-in">
+  <a class="brand" href="../"><span class="brand-mark" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8 8 2.5 14 8v5.5H9.8V10H6.2v3.5H2z" fill="#fff"/></svg></span>PracticeNest</a>
+  <nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../design/">Design review</a><a href="../app/">App</a><a href="../api/" aria-current="page">API</a><a href="../device/">Device check</a></nav>
+</div></header>
+<main>
+
+<h1>API</h1>
+<p class="lead">The app reads from this API. It only supports <code>GET</code>. Call it with Postman at this base URL:</p>
+<pre style="margin-top:12px">https://bingjiang.github.io/practicenest/api/v1</pre>
+<div class="apigrid">
+  <section class="panel"><h2><code>GET /viewings/page/{n}.json</code></h2>
+    <p>Your viewings, 4 per page, from page 1. <code>total</code> is the number of viewings across all pages. <code>start</code> and <code>end</code> are in UTC.</p>
+<pre>{
+  "page": 1, "pageSize": 4, "total": 1,
+  "results": [
+    { "id": "V-0000", "listingId": "L-000", "agentId": "A1",
+      "start": "2026-10-01T06:00:00Z", "end": "2026-10-01T06:30:00Z",
+      "status": "pending" }
+  ]
+}</pre>
+    <p><code>status</code> is one of <code>pending</code>, <code>confirmed</code>, <code>cancelled</code> or <code>completed</code>.</p>
+  </section>
+  <section class="panel"><h2><code>GET /listings/{id}.json</code></h2>
+    <p>One listing. <code>maintenanceFeeSgd</code> is the monthly fee, or <code>null</code> when the seller hasn't provided it.</p>
+<pre>{
+  "id": "L-000", "title": "…", "type": "Condo", "district": "…",
+  "price": 1000000, "bedrooms": 2, "bathrooms": 2,
+  "floorAreaSqft": 800, "floorAreaSqm": 74.3, "psf": 1250,
+  "maintenanceFeeSgd": 300, "listedOn": "2026-09-01", "agentId": "A1"
+}</pre>
+  </section>
+  <section class="panel"><h2><code>GET /agents/{id}.json</code></h2>
+    <p>One agent.</p>
+<pre>{ "id": "A1", "name": "…", "mobile": "91234567" }</pre>
+  </section>
+</div>
+
+</main>
+</body></html>
