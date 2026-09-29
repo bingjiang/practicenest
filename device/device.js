@@ -88,9 +88,9 @@ async function render() {
   const f = await facts();
   const rows = Object.entries(f).filter(([, v]) => v !== "").map(([k, v]) => `<tr><td>${esc(k)}</td><td>${esc(v)}</td></tr>`).join("");
   const list = checks(f).map(([label, pass]) => `<tr><td>${esc(label)}</td><td class="${pass ? "ok" : "no"}">${pass ? "✓ Yes" : "✗ No"}</td></tr>`).join("");
-  box.innerHTML = `<h2>What this device reports</h2><table>${rows}</table>
-    <h2 style="margin-top:18px">Set-up checks</h2><table>${list}</table>
-    <p class="code">${code(JSON.stringify(f))}</p>`;
+  box.innerHTML = `<p class="code">${code(JSON.stringify(f))}</p>
+    <h2>Set-up checks</h2><table>${list}</table>
+    <h2 style="margin-top:18px">What this device reports</h2><table>${rows}</table>`;
 }
 
 render();

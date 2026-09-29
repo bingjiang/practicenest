@@ -5,13 +5,15 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="../assets/site.css">
 <style>
-.dc{margin-top:18px;max-width:560px}
+.dc{margin-top:14px;max-width:560px}
+.dc td{padding:6px 0}
+@media (max-width:600px){.practice,.nav{display:none}main{padding-top:14px}}
 .dc table{width:100%;border-collapse:collapse}
 .dc td{padding:8px 0;border-bottom:1px solid var(--line);vertical-align:top}
 .dc td:first-child{color:var(--muted);width:42%}
 .dc td:last-child{font-weight:600;font-family:var(--mono);font-size:13px;overflow-wrap:anywhere}
 .ok{color:var(--ok)} .no{color:var(--bad)}
-.code{margin-top:14px;font-family:var(--mono);font-size:20px;font-weight:600;letter-spacing:.08em}
+.code{margin:0 0 12px;font-family:var(--mono);font-size:20px;font-weight:600;letter-spacing:.08em}
 .probe{font:-apple-system-body;position:absolute;visibility:hidden}
 @media (prefers-color-scheme:dark){:root{--bg:#0F1220;--surface:#171B2D;--sunk:#1E2338;--ink:#E6E9F4;--muted:#A0A7BF;--faint:#727A95;--line:#282E47;--accent:#7F9BF2;--accent-soft:#232C50}}
 </style>
@@ -24,7 +26,6 @@
 <main>
 
 <h1>Device check</h1>
-<p class="lead">Open this page in Safari on the iOS Simulator and in Chrome on the Android emulator, set up as your task sheet says. Take a screenshot with the simulator's own screenshot tool.</p>
 <section class="panel dc" id="dc"><p>Checking…</p></section>
 <script src="device.js" defer></script>
 
