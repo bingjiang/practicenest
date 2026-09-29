@@ -1,37 +1,34 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Design review · PracticeNest</title>
+<title>Screen review · PracticeNest</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="../assets/site.css">
 <style>
-.dr{margin-top:20px;display:grid;grid-template-columns:390px 390px minmax(0,1fr);gap:24px;align-items:start}
+.dr{margin-top:20px;display:grid;grid-template-columns:390px minmax(0,420px);gap:24px;align-items:start}
 .dr h2{display:flex;align-items:center;justify-content:space-between;gap:10px;height:34px}
-.dr img,.dr iframe{display:block;width:390px;border:1px solid var(--line);border-radius:12px;background:#fff}
-.dr iframe{height:1060px}
+.dr iframe{display:block;width:390px;height:1060px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.notes{margin-top:44px}
 .small-btn{padding:5px 10px;font-size:13px}
-@media (max-width:1100px){.dr{grid-template-columns:390px 390px}.notes{grid-column:1/-1}}
-@media (max-width:840px){.dr{grid-template-columns:minmax(0,390px)}}
+@media (max-width:840px){.dr{grid-template-columns:minmax(0,390px)}.notes{margin-top:0}}
 </style>
 </head><body>
 <div class="practice">Practice website for QA testing. All listings, agents and bookings are fictional.</div>
 <header class="bar"><div class="bar-in">
   <a class="brand" href="../"><span class="brand-mark" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 16 16"><path d="M2 8 8 2.5 14 8v5.5H9.8V10H6.2v3.5H2z" fill="#fff"/></svg></span>PracticeNest</a>
-  <nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../design/" aria-current="page">Design review</a><a href="../app/">App</a><a href="../api/">API</a><a href="../device/">Device check</a></nav>
+  <nav class="nav" aria-label="Main"><a href="../">Home</a><a href="../design/" aria-current="page">Screen review</a><a href="../app/">App</a><a href="../api/">API</a><a href="../device/">Device check</a></nav>
 </div></header>
 <main>
 
-<h1>Design review: Saved homes</h1>
-<p class="lead">The mockup is the designer's export for the iOS app. The build is the screen as coded, at the same 390 pt width. Open the build on its own to inspect it with your browser's developer tools.</p>
+<h1>Screen review: Saved homes</h1>
+<p class="lead">This is the Saved homes screen of the iOS app, as built, at 390 pt wide. Open it on its own to inspect it with your browser's developer tools.</p>
 <div class="dr">
-  <section><h2>Mockup</h2><img src="mockup.png" width="390" alt="Mockup of the Saved homes screen"></section>
   <section><h2>Build <a class="btn small-btn" href="build.html" target="_blank" rel="noopener">Open on its own</a></h2><iframe src="build.html" title="Build of the Saved homes screen" width="390" height="1060"></iframe></section>
-  <section class="panel notes"><h2>Notes from the designer</h2>
+  <section class="panel notes"><h2>About this screen</h2>
     <ul>
-      <li>The mockup shows the first 4 saved homes. The list scrolls, so the build may show more.</li>
-      <li>The status bar in the mockup belongs to the phone, not the app.</li>
+      <li>It lists the homes the buyer has saved. Every home on it is saved.</li>
+      <li>The chips at the top filter the list by property type.</li>
       <li>Titles wrap to at most 2 lines.</li>
-      <li>Every home on this screen is saved.</li>
     </ul>
   </section>
 </div>
